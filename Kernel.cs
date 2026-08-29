@@ -31,7 +31,7 @@ namespace Cosmosfilesystem
             
             }
             filesystem.ls();
-            //filesystem.
+            filesystem.cats("xxx.txt");
             while (true) {; };
             Console.WriteLine();
             var input = Console.ReadLine();
@@ -91,8 +91,25 @@ namespace Cosmosfilesystem
             }
         
         }
-    
-    
+        public static void cats(String files)
+        {
+            String[] filex = uses(cantainer, "\x05\x03\x02\x01");
+            foreach (var f in filex)
+            {
+                String[] ff = uses(f, "\x04\x03\x02\x01");
+                ff[0] = ff[0].Trim();
+                if (ff[0] != "") 
+                {
+                    if (ff[0].Trim()==files.Trim())Console.WriteLine(ff[1]);
+                
+                } 
+
+
+            }
+
+        }
+
+
     }
 
 
